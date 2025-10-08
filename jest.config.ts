@@ -18,6 +18,7 @@ const config: Config = {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
   setupFiles: ["<rootDir>/src/setupTestEnv.ts"],
+  coverageReporters: ['text']
 };
 
 export default config;
