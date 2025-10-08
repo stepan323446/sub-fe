@@ -6,6 +6,6 @@ export const WhoWeAre = {
 
 We needed a simple, reliable subscription tracker with notifications — without the complexity or privacy concerns of other apps.
 
-This project reflects our skills, values, and attention to user experience. We hope it’s helpful to you, just as it is to us.
+This project reflects our skills, values, and attention to user experience. We hope it’s helpful to you, as it is to us.
 `,
 };
