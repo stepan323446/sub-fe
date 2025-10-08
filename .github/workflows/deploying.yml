@@ -2,7 +2,7 @@ name: Django Deploying
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   testing:
@@ -30,16 +30,16 @@ jobs:
   deploying:
     runs-on: ubuntu-latest
     needs: testing
-    
+
     steps:
-    - uses: appleboy/ssh-action@v0.1.8
-      with:
-        host: ${{ secrets.SSH_IP }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_SECRET_KEY }}
-        port: 22
-        script: |
-          cd /sites/subtrack/sub-fe/
-          git pull
-          npm ci
-          npm run build
+      - uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.SSH_IP }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_SECRET_KEY }}
+          port: 22
+          script: |
+            cd /sites/subtrack/sub-fe/
+            git pull
+            npm ci
+            npm run build
