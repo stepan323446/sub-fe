@@ -1,5 +1,5 @@
-import { useSeoHeader } from "@shared/hooks";
-import { Container } from "@shared/ui";
+import { useSeoHeader } from "@/shared/hooks";
+import { Container } from "@/shared/ui";
 
 const DashboardPage = () => {
   useSeoHeader({

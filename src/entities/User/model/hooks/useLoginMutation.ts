@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import postAuthLogin from "../../api/postAuthLogin";
 import { mapTokenObtain } from "../mappers";
-import { showAxiosErrorToast } from "@shared/utils";
+import { showAxiosErrorToast } from "@/shared/utils";
 
 interface mutationFnAttrs {
   email: string;

@@ -1,7 +1,8 @@
 import axios from "axios";
+import { VITE_API_URL } from "@/shared/constants/environments"
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: VITE_API_URL,
   timeout: 30 * 1000,
 });
 
@@ -14,13 +15,12 @@ axiosInstance.interceptors.request.use(
   },
   (error) => Promise.reject(error),
 );
-// axiosInstance.interceptors.response.use(undefined, async (error) => {
-//   if (error.response?.status === 401) {
-//     // await refreshToken();
-//     return axiosInstance(error.config);
-//   }
+axiosInstance.interceptors.response.use(undefined, async (error) => {
+  if (error.response?.status === 401) {
+    localStorage.removeItem("access_token");
+  }
 
-//   throw error;
-// });
+  throw error;
+});
 
 export default axiosInstance;

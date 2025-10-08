@@ -1,5 +1,5 @@
-import promoWaveBottom from "@assets/waves/promoWaveBottom.svg";
-import { Container } from "@shared/ui";
+import promoWaveBottom from "@/assets/waves/promoWaveBottom.svg";
+import { Container } from "@/shared/ui";
 import {
   PromoButton,
   StyledHeaderTitle,
@@ -7,7 +7,7 @@ import {
   StyledPromoHeaderInner,
   StyledPromoText,
 } from "./PromoHeader.styles";
-import { Wave } from "@shared/ui";
+import { Wave } from "@/shared/ui";
 import { useNavigate } from "react-router";
 
 const PromoHeader = () => {

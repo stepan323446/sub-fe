@@ -5,6 +5,7 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "esModuleInterop": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -14,15 +15,7 @@
     "noEmit": true,
     "baseUrl": "./src",
     "paths": {
-      "@shared/*": ["./shared/*"],
-      "@shared": ["./shared"],
-
-      "@layouts": ["./layouts"],
-      "@features": ["./features"],
-      "@pages": ["./pages"],
-      "@widgets": ["./widgets"],
-      "@entities/*": ["./entities/*"],
-      "@assets/*": ["./assets/*"]
+      "@/*": ["./*"]
     },
 
     /* Linting */

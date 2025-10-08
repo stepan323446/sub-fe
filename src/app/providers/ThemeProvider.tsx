@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@mui/material/styles";
-import type { OnlyChildrenProps } from "@shared/index";
+import type { OnlyChildrenProps } from "@/shared/index";
 import theme from "../config/theme";
 import { CssBaseline } from "@mui/material";
 

@@ -1,4 +1,4 @@
-import type { OnlyChildrenProps } from "@shared/types/OnlyChildrenProps";
+import type { OnlyChildrenProps } from "@/shared/types/OnlyChildrenProps";
 import { StyledCenterText } from "./CenterTextTitle.styles";
 
 const CenterTextTitle = ({ children }: OnlyChildrenProps) => {

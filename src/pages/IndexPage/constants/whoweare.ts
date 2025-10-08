@@ -1,4 +1,4 @@
-import pc from "@assets/pc.svg";
+import pc from "@/assets/pc.svg";
 
 export const WhoWeAre = {
   image: pc,

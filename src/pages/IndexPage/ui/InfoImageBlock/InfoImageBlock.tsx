@@ -1,4 +1,4 @@
-import { Content, Image } from "@shared/ui";
+import { Content, Image } from "@/shared/ui";
 import { StyledContent, StyledInfoImageBlock } from "./InfoImageBlock.styles";
 
 interface InfoImageBlockProps {

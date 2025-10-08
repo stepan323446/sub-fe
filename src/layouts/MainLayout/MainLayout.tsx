@@ -1,6 +1,6 @@
-import { AuthGuard } from "@entities/User";
+import { AuthGuard } from "@/entities/User";
 import { Toolbar } from "@mui/material";
-import { AppNavbar } from "@widgets";
+import { AppNavbar } from "@/widgets";
 import { Outlet } from "react-router";
 
 const MainLayout = () => {

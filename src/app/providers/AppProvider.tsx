@@ -1,5 +1,5 @@
-import type { OnlyChildrenProps } from "@shared/index";
-import { AuthProvider } from "@entities/User";
+import type { OnlyChildrenProps } from "@/shared/index";
+import { AuthProvider } from "@/entities/User";
 import AppThemeProvider from "./ThemeProvider";
 
 const AppProvider = ({ children }: OnlyChildrenProps) => {

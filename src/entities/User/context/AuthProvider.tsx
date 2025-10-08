@@ -1,4 +1,4 @@
-import type { OnlyChildrenProps } from "@shared/index";
+import type { OnlyChildrenProps } from "@/shared/index";
 import { AuthContext } from "./AuthContext";
 import useLoginMutation from "../model/hooks/useLoginMutation";
 import useCurrentUser from "../model/hooks/useCurrentUser";
@@ -9,6 +9,7 @@ const AuthProvider = ({ children }: OnlyChildrenProps) => {
     data: user,
     refetch: refetchUser,
     isLoading: isLoadingUser,
+    isFetching: isFetchingUser,
   } = useCurrentUser();
   const loginMutation = useLoginMutation();
   const queryClient = useQueryClient();
@@ -38,7 +39,15 @@ const AuthProvider = ({ children }: OnlyChildrenProps) => {
 
   return (
     <AuthContext.Provider
-      value={{ user, isAuthenticated, login, logout, refreshUserData }}
+      value={{
+        user,
+        isAuthenticated,
+        login,
+        logout,
+        refreshUserData,
+        isFetchingUser,
+        isFetchingLogin: loginMutation.isPending
+      }}
     >
       {children}
     </AuthContext.Provider>

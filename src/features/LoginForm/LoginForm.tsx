@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { AuthSocialButton, Form, FormTextInput, Link } from "@shared/ui";
+import { AuthSocialButton, Form, FormTextInput, Link } from "@/shared/ui";
 import { useForm } from "react-hook-form";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -11,7 +11,7 @@ import { valibotResolver } from "@hookform/resolvers/valibot";
 import { Button } from "@mui/material";
 
 import * as v from "valibot";
-import { useAuthContext } from "@entities/User";
+import { useAuthContext } from "@/entities/User";
 import { toast } from "react-toastify";
 
 interface FormValues {
@@ -25,7 +25,7 @@ const LoginSchemeResolver = v.object({
 });
 
 const LoginForm = () => {
-  const { login } = useAuthContext();
+  const { login, isFetchingLogin } = useAuthContext();
   const { handleSubmit, control } = useForm<FormValues>({
     resolver: valibotResolver(LoginSchemeResolver),
     defaultValues: {
@@ -70,7 +70,7 @@ const LoginForm = () => {
         <AuthSocialButton size="medium" authType="google" onClick={onGoogle}>
           Google
         </AuthSocialButton>
-        <Button type="submit">Login</Button>
+        <Button type="submit" loading={isFetchingLogin}>Login</Button>
       </StyledAuthButtons>
 
       <StyledSignUpText>

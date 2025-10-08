@@ -1,5 +1,5 @@
 import { styled } from "@mui/material";
-import { WideButton } from "@shared/ui";
+import { WideButton } from "@/shared/ui";
 
 const headerTextShadow = "1px 2px 7px rgba(0,0,0,0.67)";
 

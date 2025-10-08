@@ -1,5 +1,5 @@
 import type { TokenObtainDto } from "./types";
-import { axiosInstance } from "@shared";
+import { axiosInstance } from "@/shared";
 
 interface postAuthFnAttrs {
   email: string;

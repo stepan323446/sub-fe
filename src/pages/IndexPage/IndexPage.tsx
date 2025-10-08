@@ -1,7 +1,7 @@
 import { Toolbar } from "@mui/material";
 
-import { WelcomeNavbar } from "@widgets";
-import { Grid, GridItem, WhiteBackground } from "@shared/ui";
+import { WelcomeNavbar } from "@/widgets";
+import { Grid, GridItem, WhiteBackground } from "@/shared/ui";
 
 import PromoHeader from "./ui/PromoHeader/PromoHeader";
 import Section from "./ui/Section/Section";
@@ -10,7 +10,7 @@ import AnswerBlock from "./ui/AnswerBlock/AnswerBlock";
 import { answers } from "./constants/answers";
 import InfoImageBlock from "./ui/InfoImageBlock/InfoImageBlock";
 import { WhoWeAre } from "./constants/whoweare";
-import { useSeoHeader } from "@shared/hooks";
+import { useSeoHeader } from "@/shared/hooks";
 
 const IndexPage = () => {
   useSeoHeader({

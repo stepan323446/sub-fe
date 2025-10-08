@@ -1,4 +1,4 @@
-import { Container, HeaderNavLinks } from "@shared/ui";
+import { Container, HeaderNavLinks } from "@/shared/ui";
 import {
   StyledLeftContent,
   StyledLogo,

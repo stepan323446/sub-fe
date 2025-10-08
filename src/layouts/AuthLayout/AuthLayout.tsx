@@ -1,8 +1,8 @@
-import rightWave from "@assets/waves/authWaveRight.svg";
-import authBackground from "@assets/auth_background.png";
+import rightWave from "@/assets/waves/authWaveRight.svg";
+import authBackground from "@/assets/auth_background.png";
 import { Toolbar } from "@mui/material";
-import { Image, Wave, WhiteBackground } from "@shared/ui";
-import { WelcomeNavbar } from "@widgets";
+import { Image, Wave, WhiteBackground } from "@/shared/ui";
+import { WelcomeNavbar } from "@/widgets";
 import { Outlet } from "react-router";
 import {
   StyledAuthContentContainer,

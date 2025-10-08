@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { Logo } from "@shared/ui";
+import { Logo } from "@/shared/ui";
 
 export const StyledNavbar = styled("div")(({ theme }) => ({
   position: "fixed",

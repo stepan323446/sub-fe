@@ -1,4 +1,4 @@
-import "@assets/fonts/fonts.css";
+import "@/assets/fonts/fonts.css";
 import { createTheme } from "@mui/material";
 
 import typography from "./typography";

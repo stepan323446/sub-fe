@@ -1,6 +1,6 @@
-import type { OnlyChildrenProps } from "@shared/index";
+import type { OnlyChildrenProps } from "@/shared/index";
 import { StyledSection } from "./Section.styles";
-import { Container } from "@shared/ui";
+import { Container } from "@/shared/ui";
 
 const Section = ({ children }: OnlyChildrenProps) => {
   return (

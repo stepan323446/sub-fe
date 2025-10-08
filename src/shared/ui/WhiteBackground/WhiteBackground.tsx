@@ -1,4 +1,4 @@
-import type { OnlyChildrenProps } from "@shared";
+import type { OnlyChildrenProps } from "@/shared";
 import { StyledWhiteBackground } from "./WhiteBackground.styles";
 
 const WhiteBackground = ({ children }: OnlyChildrenProps) => {

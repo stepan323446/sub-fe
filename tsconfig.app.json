@@ -6,8 +6,9 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
 
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
@@ -16,18 +17,9 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "@shared/*": ["./shared/*"],
-      "@shared": ["./shared"],
-
-      "@layouts": ["./layouts"],
-      "@features": ["./features"],
-      "@pages": ["./pages"],
-      "@widgets": ["./widgets"],
-      "@entities/*": ["./entities/*"],
-      "@assets/*": ["./assets/*"]
+      "@/*": ["./*"]
     },
 
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -35,5 +27,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "__tests__"]
 }

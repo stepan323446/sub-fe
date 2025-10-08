@@ -7,6 +7,8 @@ interface AuthContextType {
   login: (email: string, password: string) => void;
   logout: () => void;
   refreshUserData: () => void;
+  isFetchingUser: boolean;
+  isFetchingLogin: boolean;
 }
 
 export const AuthContext = createContext<AuthContextType | undefined>(

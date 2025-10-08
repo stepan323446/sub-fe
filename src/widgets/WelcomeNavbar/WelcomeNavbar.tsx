@@ -1,4 +1,4 @@
-import { Container, Logo } from "@shared/ui";
+import { Container, Logo } from "@/shared/ui";
 import {
   StyledSpecialText,
   StyledNavbar,
@@ -6,7 +6,7 @@ import {
 } from "./WelcomeNavbar.styles";
 import { Button } from "@mui/material";
 import { Link } from "react-router";
-import { useAuthContext } from "@entities/User";
+import { useAuthContext } from "@/entities/User";
 
 interface WelcomeNavbarProps {
   showButton?: boolean;
