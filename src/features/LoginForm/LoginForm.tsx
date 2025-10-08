@@ -70,7 +70,9 @@ const LoginForm = () => {
         <AuthSocialButton size="medium" authType="google" onClick={onGoogle}>
           Google
         </AuthSocialButton>
-        <Button type="submit" loading={isFetchingLogin}>Login</Button>
+        <Button type="submit" loading={isFetchingLogin}>
+          Login
+        </Button>
       </StyledAuthButtons>
 
       <StyledSignUpText>

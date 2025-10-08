@@ -46,7 +46,7 @@ const AuthProvider = ({ children }: OnlyChildrenProps) => {
         logout,
         refreshUserData,
         isFetchingUser,
-        isFetchingLogin: loginMutation.isPending
+        isFetchingLogin: loginMutation.isPending,
       }}
     >
       {children}

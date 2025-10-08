@@ -6,5 +6,5 @@ export const userInfo = {
   currency: 1,
   is_monday_first: true,
   notification_email_enable: true,
-  news_email_enable: false
-}
+  news_email_enable: false,
+};

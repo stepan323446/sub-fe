@@ -13,8 +13,9 @@ const config: Config = {
   moduleNameMapper: {
     "\\.(css|less|scss|sass)$": "<rootDir>/__tests__/mocks/file.ts",
     "\\.(svg|png|jpg|jpeg|gif)": "<rootDir>/__tests__/mocks/file.ts",
-    "^@/shared/constants/environments": "<rootDir>/__tests__/mocks/environments.ts",
-    "^@/(.*)$": "<rootDir>/src/$1"
+    "^@/shared/constants/environments":
+      "<rootDir>/__tests__/mocks/environments.ts",
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
   setupFiles: ["<rootDir>/src/setupTestEnv.ts"],
 };

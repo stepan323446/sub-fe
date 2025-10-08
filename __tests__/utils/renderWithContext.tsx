@@ -10,12 +10,10 @@ const renderWithProviders = (ui: ReactNode) => {
   return render(
     <QueryClientProvider client={queryClient}>
       <AppProvider>
-        <MemoryRouter>
-          {ui}
-        </MemoryRouter>
+        <MemoryRouter>{ui}</MemoryRouter>
       </AppProvider>
-    </QueryClientProvider>
+    </QueryClientProvider>,
   );
 };
 
-export default renderWithProviders
+export default renderWithProviders;
