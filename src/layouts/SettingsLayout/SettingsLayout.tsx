@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, GridItem, Panel } from "@/shared/ui";
+import { Container, Grid, GridItem, Panel, PanelWrapper } from "@/shared/ui";
 import { Typography } from "@mui/material";
 import { Outlet, useNavigate } from "react-router";
 import {
@@ -25,22 +25,24 @@ const SettingsLayout = () => {
       <Grid gap={25} cols={{ default: "300px 1fr" }}>
         <GridItem>
           <Panel>
-            {settingsNavSections.map((section, index) => (
-              <React.Fragment key={index}>
-                <StyledNavHeader key={index}>{section.title}</StyledNavHeader>
-                {section.links.map((link, index) => (
-                  <React.Fragment key={index}>
-                    <StyledNavLink to={link.to}>{link.content}</StyledNavLink>
-                  </React.Fragment>
-                ))}
+            <PanelWrapper>
+              {settingsNavSections.map((section, index) => (
+                <React.Fragment key={index}>
+                  <StyledNavHeader key={index}>{section.title}</StyledNavHeader>
+                  {section.links.map((link, index) => (
+                    <React.Fragment key={index}>
+                      <StyledNavLink to={link.to}>{link.content}</StyledNavLink>
+                    </React.Fragment>
+                  ))}
 
-                {section.title === "Account" && (
-                  <StyledLogoutAction onClick={() => logoutAction()}>
-                    Logout
-                  </StyledLogoutAction>
-                )}
-              </React.Fragment>
-            ))}
+                  {section.title === "Account" && (
+                    <StyledLogoutAction onClick={() => logoutAction()}>
+                      Logout
+                    </StyledLogoutAction>
+                  )}
+                </React.Fragment>
+              ))}
+            </PanelWrapper>
           </Panel>
         </GridItem>
         <GridItem>
