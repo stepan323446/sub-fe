@@ -1,3 +1,4 @@
+import { mapCurrencyDto } from "@/entities/Currency";
 import type { TokenObtainDto, UserDto } from "../api/types";
 import type { TokenObtain, User } from "./types";
 
@@ -7,6 +8,7 @@ export const mapUserDto = (dto: UserDto): User => ({
   email: dto.email,
   limit: dto.limit,
   currency: dto.currency,
+  currencyDetail: mapCurrencyDto(dto.currency_detail),
   isMondayFirst: dto.is_monday_first,
   notificationEmailEnable: dto.notification_email_enable,
   newsEmailEnable: dto.news_email_enable,

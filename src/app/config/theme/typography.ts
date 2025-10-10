@@ -23,6 +23,7 @@ const typography: TypographyVariantsOptions = {
   h1: {
     fontSize: 32,
     fontFamily: headerFontFamily,
+    marginBottom: 20,
   },
   body1: {
     fontSize: 20,

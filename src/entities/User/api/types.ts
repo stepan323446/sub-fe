@@ -1,9 +1,12 @@
+import type { CurrencyDto } from "@/entities/Currency";
+
 export interface UserDto {
   id: number;
   username: string;
   email: string;
   limit: number;
   currency: number;
+  currency_detail: CurrencyDto;
   is_monday_first: boolean;
   notification_email_enable: boolean;
   news_email_enable: boolean;

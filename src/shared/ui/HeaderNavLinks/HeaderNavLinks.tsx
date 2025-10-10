@@ -12,7 +12,7 @@ const HeaderNavLinks = ({ links }: HeaderNavLinksProps) => {
   return (
     <StyledLinkContainer>
       {links.map((link, index) => (
-        <StyledNavLink {...link} key={index}>
+        <StyledNavLink {...link} key={index} end>
           {link.children}
         </StyledNavLink>
       ))}

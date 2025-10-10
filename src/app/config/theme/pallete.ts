@@ -5,20 +5,23 @@ import type { PaletteColor } from "@mui/material/styles";
 
 declare module "@mui/material" {
   interface PaletteOptions {
+    blockBorder?: PaletteColorOptions;
+
     gradientStart?: PaletteColorOptions;
     gradientEnd?: PaletteColorOptions;
-    backgroundSecondary?: PaletteColorOptions;
   }
   interface Palette {
+    blockBorder: PaletteColor;
+
     gradientStart: PaletteColor;
     gradientEnd: PaletteColor;
-    backgroundSecondary: PaletteColor;
   }
 }
 
 const palette: PaletteOptions = {
   primary: color.primaryBlue,
   secondary: color.secondaryTextColor,
+  blockBorder: color.blockBorderColor,
 
   gradientStart: color.gradientStartColor,
   gradientEnd: color.gradientEndColor,
