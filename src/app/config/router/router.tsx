@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import * as page from "@/pages";
-import { AuthLayout, MainLayout } from "@/layouts";
+import { AuthLayout, MainLayout, SettingsLayout } from "@/layouts";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +24,16 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <page.DashboardPage />,
+      },
+      {
+        path: "settings",
+        element: <SettingsLayout />,
+        children: [
+          {
+            path: "general",
+            element: <page.GeneralSettingsPage />,
+          },
+        ],
       },
     ],
   },

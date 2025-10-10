@@ -1,11 +1,17 @@
 import { Container, HeaderNavLinks } from "@/shared/ui";
 import {
   StyledLeftContent,
+  StyledLimit,
   StyledLogo,
   StyledNavbar,
   StyledNavbarInner,
+  StyledNickname,
+  StyledProfile,
+  StyledProfileInfo,
   StyledRightContent,
 } from "./AppNavbar.styles";
+import { useAuthContext } from "@/entities/User";
+import { Avatar } from "@mui/material";
 
 const links = [
   {
@@ -31,6 +37,8 @@ const links = [
 ];
 
 const AppNavbar = () => {
+  const { user } = useAuthContext();
+
   return (
     <StyledNavbar>
       <Container>
@@ -39,7 +47,19 @@ const AppNavbar = () => {
             <StyledLogo to="/app" />
             <HeaderNavLinks links={links} />
           </StyledLeftContent>
-          <StyledRightContent></StyledRightContent>
+          <StyledRightContent>
+            {user && (
+              <StyledProfile to="/app/settings/general">
+                <Avatar />
+                <StyledProfileInfo>
+                  <StyledNickname>{user.username}</StyledNickname>
+                  <StyledLimit>
+                    0 / {user.limit} {user.currencyDetail.code} per moth
+                  </StyledLimit>
+                </StyledProfileInfo>
+              </StyledProfile>
+            )}
+          </StyledRightContent>
         </StyledNavbarInner>
       </Container>
     </StyledNavbar>

@@ -14,3 +14,4 @@ export { default as Link } from "./Link/Link";
 export { default as Form } from "./Form/Form";
 export { default as AuthSocialButton } from "./AuthSocialButton/AuthSocialButton";
 export { default as HeaderNavLinks } from "./HeaderNavLinks/HeaderNavLinks";
+export { default as Panel } from "./Panel/Panel";

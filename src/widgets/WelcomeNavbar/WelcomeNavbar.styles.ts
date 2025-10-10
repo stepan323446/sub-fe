@@ -14,6 +14,10 @@ export const StyledNavbarInner = styled("div")(() => ({
   padding: "14px 0",
 }));
 
-export const StyledSpecialText = styled("div")(() => ({
+export const StyledSpecialText = styled("div")(({ theme }) => ({
   fontSize: 16,
+
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
 }));

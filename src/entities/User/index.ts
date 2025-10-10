@@ -1,6 +1,7 @@
 // Types
 export type { UserDto } from "./api/types";
 export type { User } from "./model/types";
+export { mapUserDto } from "./model/mappers";
 
 // Hooks
 export { default as useCurrentUser } from "./model/hooks/useCurrentUser";
