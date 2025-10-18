@@ -1,13 +1,12 @@
 import { styled } from "@mui/material/styles";
-import { Logo } from "@/shared/ui";
-import { Link } from "react-router";
+import { BurgerMenu, Logo } from "@/shared/ui";
 
 export const StyledNavbar = styled("div")(({ theme }) => ({
   position: "fixed",
   width: "100%",
   boxShadow: theme.shadows[2],
   background: theme.palette.background.paper,
-  zIndex: 9999,
+  zIndex: 999,
 }));
 export const StyledLeftContent = styled("div")(() => ({
   display: "flex",
@@ -27,18 +26,13 @@ export const StyledLogo = styled(Logo)(() => ({
   display: "block",
   marginRight: "30px",
 }));
-export const StyledProfile = styled(Link)(({ theme }) => ({
-  display: "flex",
-  color: theme.palette.text.primary,
+export const StyledMobileHidden = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    display: "none",
+  },
 }));
-export const StyledProfileInfo = styled("div")(() => ({
-  marginLeft: "10px",
-}));
-export const StyledNickname = styled("div")(() => ({
-  fontSize: 16,
-  fontWeight: 600,
-}));
-export const StyledLimit = styled("div")(({ theme }) => ({
-  fontSize: 13,
-  color: theme.palette.text.disabled,
+export const StyledBurgerMenu = styled(BurgerMenu)(({ theme }) => ({
+  [theme.breakpoints.up("md")]: {
+    display: "none",
+  },
 }));

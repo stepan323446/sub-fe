@@ -6,13 +6,19 @@ type CustomNavLink = ComponentProps<typeof NavLink>;
 
 interface HeaderNavLinksProps {
   links: CustomNavLink[];
+  isVertical?: boolean;
+  onClickItem?: () => void;
 }
 
-const HeaderNavLinks = ({ links }: HeaderNavLinksProps) => {
+const HeaderNavLinks = ({
+  links,
+  onClickItem,
+  isVertical = false,
+}: HeaderNavLinksProps) => {
   return (
-    <StyledLinkContainer>
+    <StyledLinkContainer isVertical={isVertical}>
       {links.map((link, index) => (
-        <StyledNavLink {...link} key={index} end>
+        <StyledNavLink {...link} key={index} onClick={onClickItem} end>
           {link.children}
         </StyledNavLink>
       ))}

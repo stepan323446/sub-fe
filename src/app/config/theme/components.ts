@@ -67,6 +67,13 @@ const components: MuiComponentConfig = {
       },
     },
   },
+  MuiSkeleton: {
+    styleOverrides: {
+      root: {
+        transform: "none",
+      },
+    },
+  },
 };
 
 export default components;
