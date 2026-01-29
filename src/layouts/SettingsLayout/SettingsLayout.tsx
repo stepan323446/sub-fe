@@ -14,7 +14,9 @@ const SettingsLayout = () => {
             <MenuContent />
           </PanelWrapper>
         </Sidebar>
-        <Outlet />
+        <div>
+          <Outlet />
+        </div>
       </SidebarLayout>
     </Container>
   );
