@@ -33,6 +33,10 @@ const router = createBrowserRouter([
             path: "general",
             element: <page.GeneralSettingsPage />,
           },
+          {
+            path: "labels",
+            element: <page.LabelsSettingsPage />,
+          },
         ],
       },
     ],

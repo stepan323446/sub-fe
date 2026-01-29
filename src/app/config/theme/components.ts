@@ -22,6 +22,7 @@ const components: MuiComponentConfig = {
         fontFamily: typography.fontFamilies?.primary,
         fontSize: 12,
         borderRadius: 16,
+        lineHeight: "12px",
       },
       sizeMedium: {
         fontSize: 18,

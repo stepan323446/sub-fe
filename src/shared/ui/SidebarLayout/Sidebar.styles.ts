@@ -2,6 +2,7 @@ import { Panel } from "..";
 import { styled } from "@mui/material";
 
 export const StyledContent = styled(Panel)(({ theme }) => ({
+  height: "fit-content",
   [theme.breakpoints.down("md")]: {
     display: "none",
   },
