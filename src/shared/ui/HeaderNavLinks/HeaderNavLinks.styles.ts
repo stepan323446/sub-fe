@@ -1,9 +1,13 @@
 import { styled } from "@mui/material";
 import { NavLink } from "react-router";
 
-export const StyledLinkContainer = styled("nav")(() => ({
+export const StyledLinkContainer = styled("nav")<{
+  isVertical: boolean;
+}>(({ isVertical }) => ({
   "& > *": {
-    marginRight: 15,
+    display: isVertical ? "block" : "inline-block",
+    marginRight: isVertical ? 0 : 15,
+    padding: isVertical ? "5px 10px" : 0,
   },
 }));
 
@@ -14,6 +18,5 @@ export const StyledNavLink = styled(NavLink)(({ theme }) => ({
   "&.active": {
     color: theme.palette.text.primary,
     fontWeight: 600,
-    marginRight: 15,
   },
 }));

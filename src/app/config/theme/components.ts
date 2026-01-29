@@ -22,6 +22,7 @@ const components: MuiComponentConfig = {
         fontFamily: typography.fontFamilies?.primary,
         fontSize: 12,
         borderRadius: 16,
+        lineHeight: "12px",
       },
       sizeMedium: {
         fontSize: 18,
@@ -64,6 +65,13 @@ const components: MuiComponentConfig = {
     styleOverrides: {
       root: {
         textDecoration: "none",
+      },
+    },
+  },
+  MuiSkeleton: {
+    styleOverrides: {
+      root: {
+        transform: "none",
       },
     },
   },
